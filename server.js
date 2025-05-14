@@ -20,6 +20,25 @@ app.get("/api/v1/dictionaries", (req, res) => {
   });
 });
 
+app.post("/api/v1/dictionaries", (req, res) => {
+  const newId = dictionaries[dictionaries.length - 1]._id + 1;
+  const newDictionary = Object.assign({ _id: newId }, req.body);
+
+  dictionaries.push(newDictionary);
+  fs.writeFile(
+    `${__dirname}/dev-data/data/dictionary.json`,
+    JSON.stringify(dictionaries),
+    (err) => {
+      res.status(201).json({
+        status: "success",
+        data: {
+          dictionaries: newDictionary,
+        },
+      });
+    }
+  );
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
