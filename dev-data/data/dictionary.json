@@ -1,1 +1,184 @@
-[{"_id":1,"word":"abandon","definition":"To leave something or someone behind, often suddenly or permanently.","example":"The sailors had to abandon the ship during the storm.","synonyms":["leave","forsake","desert"],"antonyms":["keep","stay","retain"]},{"_id":2,"word":"abundant","definition":"Existing or available in large quantities; plentiful.","example":"The garden is abundant with fresh vegetables in summer.","synonyms":["plentiful","ample","bountiful"],"antonyms":["scarce","insufficient","limited"]},{"_id":3,"word":"adapt","definition":"To change something to suit different conditions or uses.","example":"She had to adapt quickly to the new work environment.","synonyms":["adjust","modify","acclimate"],"antonyms":["resist","reject","oppose"]},{"_id":4,"word":"ambitious","definition":"Having a strong desire to succeed or achieve something.","example":"He is an ambitious student who dreams of becoming a doctor.","synonyms":["aspiring","driven","determined"],"antonyms":["lazy","unmotivated","indifferent"]},{"_id":5,"word":"authentic","definition":"Genuine and true, not fake or copied.","example":"This restaurant serves authentic Italian cuisine.","synonyms":["genuine","real","legitimate"],"antonyms":["fake","false","counterfeit"]},{"_id":6,"word":"beneficial","definition":"Producing good or helpful results or effects.","example":"Regular exercise is beneficial to your health.","synonyms":["helpful","advantageous","useful"],"antonyms":["harmful","damaging","detrimental"]},{"_id":7,"word":"brilliant","definition":"Very bright or intelligent; impressive or clever.","example":"She gave a brilliant performance at the concert.","synonyms":["bright","smart","outstanding"],"antonyms":["dull","stupid","mediocre"]},{"_id":8,"word":"brisk","definition":"Quick and energetic in movement or activity.","example":"They went for a brisk walk in the morning.","synonyms":["quick","lively","energetic"],"antonyms":["slow","lethargic","sluggish"]},{"_id":9,"word":"bizarre","definition":"Very strange or unusual.","example":"He wore a bizarre outfit to the party.","synonyms":["strange","weird","unusual"],"antonyms":["normal","ordinary","common"]},{"_id":10,"word":"barrier","definition":"A fence or obstacle that prevents movement or access.","example":"The fallen tree created a barrier on the road.","synonyms":["obstacle","hindrance","blockade"],"antonyms":["gateway","opening","passage"]},{"_id":11,"word":"clarify","definition":"To make something clear or easier to understand.","example":"The teacher clarified the instructions for the exam.","synonyms":["explain","simplify","elucidate"],"antonyms":["confuse","obscure","complicate"]},{"_id":12,"word":"cautious","definition":"Careful to avoid danger or mistakes.","example":"She was cautious when crossing the icy road.","synonyms":["careful","alert","prudent"],"antonyms":["reckless","careless","rash"]},{"_id":13,"word":"compassion","definition":"A feeling of sympathy and concern for others’ suffering.","example":"He showed great compassion to the homeless.","synonyms":["sympathy","empathy","kindness"],"antonyms":["cruelty","indifference","apathy"]},{"_id":14,"word":"contribute","definition":"To give or help to achieve something together with others.","example":"Everyone contributed ideas to the group project.","synonyms":["donate","offer","assist"],"antonyms":["withhold","subtract","oppose"]},{"_id":15,"word":"crucial","definition":"Extremely important or necessary.","example":"Getting enough sleep is crucial for good health.","synonyms":["essential","vital","critical"],"antonyms":["trivial","unimportant","minor"]},{"_id":16,"word":"candid","definition":"Truthful and straightforward; frank.","example":"She gave a candid response during the interview.","synonyms":["honest","open","sincere"],"antonyms":["deceitful","reserved","dishonest"]},{"_id":17,"word":"celebrate","definition":"To honor or mark an occasion with joy or festivity.","example":"They celebrated her graduation with a big party.","synonyms":["commemorate","observe","rejoice"],"antonyms":["ignore","disregard","forget"]},{"_id":18,"word":"combine","definition":"To bring two or more things together.","example":"We combined our ideas to create one final plan.","synonyms":["merge","unite","blend"],"antonyms":["separate","divide","split"]},{"_id":19,"word":"capable","definition":"Having the ability, fitness, or quality necessary to do something.","example":"She is capable of leading the entire team.","synonyms":["competent","able","qualified"],"antonyms":["incapable","incompetent","unfit"]},{"_id":20,"word":"collapse","definition":"To fall down or give way suddenly.","example":"The building collapsed after the earthquake.","synonyms":["fall","crumble","break down"],"antonyms":["stand","rise","remain"]},{"_id":21,"word":"conserve","definition":"To protect something from harm or destruction, especially the environment or resources.","example":"We need to conserve water during the dry season.","synonyms":["preserve","protect","save"],"antonyms":["waste","neglect","squander"]}]
+[
+  {
+    "_id": 1,
+    "word": "abandon",
+    "definition": "To leave something or someone behind, often suddenly or permanently.",
+    "example": "The sailors had to abandon the ship during the storm.",
+    "synonyms": ["leave", "forsake", "desert"],
+    "antonyms": ["keep", "stay", "retain"]
+  },
+  {
+    "_id": 2,
+    "word": "abundant",
+    "definition": "Existing or available in large quantities; plentiful.",
+    "example": "The garden is abundant with fresh vegetables in summer.",
+    "synonyms": ["plentiful", "ample", "bountiful"],
+    "antonyms": ["scarce", "insufficient", "limited"]
+  },
+  {
+    "_id": 3,
+    "word": "adapt",
+    "definition": "To change something to suit different conditions or uses.",
+    "example": "She had to adapt quickly to the new work environment.",
+    "synonyms": ["adjust", "modify", "acclimate"],
+    "antonyms": ["resist", "reject", "oppose"]
+  },
+  {
+    "_id": 4,
+    "word": "ambitious",
+    "definition": "Having a strong desire to succeed or achieve something.",
+    "example": "He is an ambitious student who dreams of becoming a doctor.",
+    "synonyms": ["aspiring", "driven", "determined"],
+    "antonyms": ["lazy", "unmotivated", "indifferent"]
+  },
+  {
+    "_id": 5,
+    "word": "authentic",
+    "definition": "Genuine and true, not fake or copied.",
+    "example": "This restaurant serves authentic Italian cuisine.",
+    "synonyms": ["genuine", "real", "legitimate"],
+    "antonyms": ["fake", "false", "counterfeit"]
+  },
+  {
+    "_id": 6,
+    "word": "beneficial",
+    "definition": "Producing good or helpful results or effects.",
+    "example": "Regular exercise is beneficial to your health.",
+    "synonyms": ["helpful", "advantageous", "useful"],
+    "antonyms": ["harmful", "damaging", "detrimental"]
+  },
+  {
+    "_id": 7,
+    "word": "brilliant",
+    "definition": "Very bright or intelligent; impressive or clever.",
+    "example": "She gave a brilliant performance at the concert.",
+    "synonyms": ["bright", "smart", "outstanding"],
+    "antonyms": ["dull", "stupid", "mediocre"]
+  },
+  {
+    "_id": 8,
+    "word": "brisk",
+    "definition": "Quick and energetic in movement or activity.",
+    "example": "They went for a brisk walk in the morning.",
+    "synonyms": ["quick", "lively", "energetic"],
+    "antonyms": ["slow", "lethargic", "sluggish"]
+  },
+  {
+    "_id": 9,
+    "word": "bizarre",
+    "definition": "Very strange or unusual.",
+    "example": "He wore a bizarre outfit to the party.",
+    "synonyms": ["strange", "weird", "unusual"],
+    "antonyms": ["normal", "ordinary", "common"]
+  },
+  {
+    "_id": 10,
+    "word": "barrier",
+    "definition": "A fence or obstacle that prevents movement or access.",
+    "example": "The fallen tree created a barrier on the road.",
+    "synonyms": ["obstacle", "hindrance", "blockade"],
+    "antonyms": ["gateway", "opening", "passage"]
+  },
+  {
+    "_id": 11,
+    "word": "clarify",
+    "definition": "To make something clear or easier to understand.",
+    "example": "The teacher clarified the instructions for the exam.",
+    "synonyms": ["explain", "simplify", "elucidate"],
+    "antonyms": ["confuse", "obscure", "complicate"]
+  },
+  {
+    "_id": 12,
+    "word": "cautious",
+    "definition": "Careful to avoid danger or mistakes.",
+    "example": "She was cautious when crossing the icy road.",
+    "synonyms": ["careful", "alert", "prudent"],
+    "antonyms": ["reckless", "careless", "rash"]
+  },
+  {
+    "_id": 13,
+    "word": "compassion",
+    "definition": "A feeling of sympathy and concern for others’ suffering.",
+    "example": "He showed great compassion to the homeless.",
+    "synonyms": ["sympathy", "empathy", "kindness"],
+    "antonyms": ["cruelty", "indifference", "apathy"]
+  },
+  {
+    "_id": 14,
+    "word": "contribute",
+    "definition": "To give or help to achieve something together with others.",
+    "example": "Everyone contributed ideas to the group project.",
+    "synonyms": ["donate", "offer", "assist"],
+    "antonyms": ["withhold", "subtract", "oppose"]
+  },
+  {
+    "_id": 15,
+    "word": "crucial",
+    "definition": "Extremely important or necessary.",
+    "example": "Getting enough sleep is crucial for good health.",
+    "synonyms": ["essential", "vital", "critical"],
+    "antonyms": ["trivial", "unimportant", "minor"]
+  },
+  {
+    "_id": 16,
+    "word": "candid",
+    "definition": "Truthful and straightforward; frank.",
+    "example": "She gave a candid response during the interview.",
+    "synonyms": ["honest", "open", "sincere"],
+    "antonyms": ["deceitful", "reserved", "dishonest"]
+  },
+  {
+    "_id": 17,
+    "word": "celebrate",
+    "definition": "To honor or mark an occasion with joy or festivity.",
+    "example": "They celebrated her graduation with a big party.",
+    "synonyms": ["commemorate", "observe", "rejoice"],
+    "antonyms": ["ignore", "disregard", "forget"]
+  },
+  {
+    "_id": 18,
+    "word": "combine",
+    "definition": "To bring two or more things together.",
+    "example": "We combined our ideas to create one final plan.",
+    "synonyms": ["merge", "unite", "blend"],
+    "antonyms": ["separate", "divide", "split"]
+  },
+  {
+    "_id": 19,
+    "word": "capable",
+    "definition": "Having the ability, fitness, or quality necessary to do something.",
+    "example": "She is capable of leading the entire team.",
+    "synonyms": ["competent", "able", "qualified"],
+    "antonyms": ["incapable", "incompetent", "unfit"]
+  },
+  {
+    "_id": 20,
+    "word": "collapse",
+    "definition": "To fall down or give way suddenly.",
+    "example": "The building collapsed after the earthquake.",
+    "synonyms": ["fall", "crumble", "break down"],
+    "antonyms": ["stand", "rise", "remain"]
+  },
+  {
+    "_id": 21,
+    "word": "conserve",
+    "definition": "To protect something from harm or destruction, especially the environment or resources.",
+    "example": "We need to conserve water during the dry season.",
+    "synonyms": ["preserve", "protect", "save"],
+    "antonyms": ["waste", "neglect", "squander"]
+  },
+  {
+    "_id": 22,
+    "word": "analyze",
+    "definition": "To examine something in detail to understand it better or discover more about it.",
+    "example": "The scientist analyzed the data from the experiment.",
+    "antonyms": ["synthesize", "combine", "ignore"]
+  },
+  {
+    "_id": 23,
+    "word": "bravery",
+    "definition": "Courageous behavior or character.",
+    "example": "The firefighter showed great bravery during the rescue.",
+    "synonyms": ["courage", "valor", "boldness"]
+  }
+]
