@@ -10,7 +10,7 @@ const dictionaries = JSON.parse(
   fs.readFileSync(`${__dirname}/dev-data/data/dictionary.json`, "utf-8")
 );
 
-app.get("/api/v1/dictionaries", (req, res) => {
+const getAllDictionaries = (req, res) => {
   res.status(200).json({
     status: "success",
     results: dictionaries.length,
@@ -18,9 +18,9 @@ app.get("/api/v1/dictionaries", (req, res) => {
       dictionaries,
     },
   });
-});
+};
 
-app.post("/api/v1/dictionaries", (req, res) => {
+const createDictionaries = (req, res) => {
   const newId = dictionaries[dictionaries.length - 1]._id + 1;
   const newDictionary = Object.assign({ _id: newId }, req.body);
 
@@ -37,9 +37,9 @@ app.post("/api/v1/dictionaries", (req, res) => {
       });
     }
   );
-});
+};
 
-app.patch("/api/v1/dictionaries/:id", (req, res) => {
+const updateDictionaries = (req, res) => {
   if (req.params.id * 1 > dictionaries.length) {
     return res.status(404).json({
       status: "fail",
@@ -53,9 +53,9 @@ app.patch("/api/v1/dictionaries/:id", (req, res) => {
       dictionary: "<Updated dictionary here..>",
     },
   });
-});
+};
 
-app.delete("/api/v1/dictionaries/:id", (req, res) => {
+const deleteDictionaries = (req, res) => {
   if (req.params.id * 1 > dictionaries.length) {
     return res.status(404).json({
       status: "fail",
@@ -67,7 +67,17 @@ app.delete("/api/v1/dictionaries/:id", (req, res) => {
     status: "success",
     data: null,
   });
-});
+};
+
+app
+  .route("/api/v1/dictionaries")
+  .get(getAllDictionaries)
+  .post(createDictionaries);
+
+app
+  .route("/api/v1/dictionaries/:id")
+  .patch(updateDictionaries)
+  .delete(deleteDictionaries);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
