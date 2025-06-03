@@ -4,6 +4,16 @@ const dictionaries = JSON.parse(
   fs.readFileSync(`${__dirname}/../dev-data/data/dictionary.json`, "utf-8")
 );
 
+exports.CheckID = (req, res, next, val) => {
+  if (req.params.id * 1 > dictionaries.length) {
+    return res.status(404).json({
+      status: "fail",
+      message: "Invalid ID",
+    });
+  }
+  next();
+};
+
 exports.getAllDictionaries = (req, res) => {
   res.status(200).json({
     status: "success",
@@ -34,13 +44,6 @@ exports.createDictionaries = (req, res) => {
 };
 
 exports.updateDictionaries = (req, res) => {
-  if (req.params.id * 1 > dictionaries.length) {
-    return res.status(404).json({
-      status: "fail",
-      message: "Invalid ID",
-    });
-  }
-
   res.status(200).json({
     status: "success",
     data: {
@@ -50,13 +53,6 @@ exports.updateDictionaries = (req, res) => {
 };
 
 exports.deleteDictionaries = (req, res) => {
-  if (req.params.id * 1 > dictionaries.length) {
-    return res.status(404).json({
-      status: "fail",
-      message: "Invalid ID",
-    });
-  }
-
   res.status(204).json({
     status: "success",
     data: null,
