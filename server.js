@@ -69,6 +69,31 @@ const deleteDictionaries = (req, res) => {
   });
 };
 
+const getAllUsers = (req, res) => {
+  res.status(500).json({
+    status: "error",
+    message: "This route is not yet defined!",
+  });
+};
+const createUsers = (req, res) => {
+  res.status(500).json({
+    status: "error",
+    message: "This route is not yet defined!",
+  });
+};
+const updateUsers = (req, res) => {
+  res.status(500).json({
+    status: "error",
+    message: "This route is not yet defined!",
+  });
+};
+const deleteUsers = (req, res) => {
+  res.status(500).json({
+    status: "error",
+    message: "This route is not yet defined!",
+  });
+};
+
 app
   .route("/api/v1/dictionaries")
   .get(getAllDictionaries)
@@ -78,6 +103,10 @@ app
   .route("/api/v1/dictionaries/:id")
   .patch(updateDictionaries)
   .delete(deleteDictionaries);
+
+app.route("/api/v1/users").get(getAllUsers).post(createUsers);
+
+app.route("/api/v1/users/:id").patch(updateUsers).delete(deleteUsers);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
