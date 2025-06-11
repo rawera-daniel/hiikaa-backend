@@ -26,7 +26,8 @@ exports.getAllDictionaries = (req, res) => {
 
 exports.createDictionaries = (req, res) => {
   const newId = dictionaries[dictionaries.length - 1]._id + 1;
-  const newDictionary = Object.assign({ _id: newId }, req.body);
+  // const newDictionary = Object.assign({ _id: newId }, req.body);
+  const newDictionary = { _id: newId, ...req.body };
 
   dictionaries.push(newDictionary);
   fs.writeFile(
