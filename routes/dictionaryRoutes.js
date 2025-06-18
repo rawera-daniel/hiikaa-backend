@@ -9,8 +9,6 @@ const {
 
 const router = express.Router();
 
-router.param("id", CheckID);
-
 router.route("/").get(getAllDictionaries).post(createDictionaries);
 
 router.route("/:id").patch(updateDictionaries).delete(deleteDictionaries);

@@ -1,18 +1,9 @@
 const fs = require("fs");
+const Dictionary = require("../models/dictionaryModel");
 
 const dictionaries = JSON.parse(
   fs.readFileSync(`${__dirname}/../dev-data/data/dictionary.json`, "utf-8")
 );
-
-exports.CheckID = (req, res, next, val) => {
-  if (req.params.id * 1 > dictionaries.length) {
-    return res.status(404).json({
-      status: "fail",
-      message: "Invalid ID",
-    });
-  }
-  next();
-};
 
 exports.getAllDictionaries = (req, res) => {
   res.status(200).json({
@@ -24,24 +15,22 @@ exports.getAllDictionaries = (req, res) => {
   });
 };
 
-exports.createDictionaries = (req, res) => {
-  const newId = dictionaries[dictionaries.length - 1]._id + 1;
-  // const newDictionary = Object.assign({ _id: newId }, req.body);
-  const newDictionary = { _id: newId, ...req.body };
+exports.createDictionaries = async (req, res) => {
+  try {
+    const newDictionary = await Dictionary.create(req.body);
 
-  dictionaries.push(newDictionary);
-  fs.writeFile(
-    `${__dirname}/dev-data/data/dictionary.json`,
-    JSON.stringify(dictionaries),
-    (err) => {
-      res.status(201).json({
-        status: "success",
-        data: {
-          dictionaries: newDictionary,
-        },
-      });
-    }
-  );
+    res.status(201).json({
+      status: "success",
+      data: {
+        dictionary: newDictionary,
+      },
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "fail",
+      message: err.message,
+    });
+  }
 };
 
 exports.updateDictionaries = (req, res) => {
