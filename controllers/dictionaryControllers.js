@@ -5,14 +5,23 @@ const dictionaries = JSON.parse(
   fs.readFileSync(`${__dirname}/../dev-data/data/dictionary.json`, "utf-8")
 );
 
-exports.getAllDictionaries = (req, res) => {
-  res.status(200).json({
-    status: "success",
-    results: dictionaries.length,
-    data: {
-      dictionaries,
-    },
-  });
+exports.getAllDictionaries = async (req, res) => {
+  try {
+    const dictionaries = await Dictionary.find();
+
+    res.status(200).json({
+      status: "success",
+      results: dictionaries.length,
+      data: {
+        dictionaries,
+      },
+    });
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: err.message,
+    });
+  }
 };
 
 exports.createDictionaries = async (req, res) => {
@@ -26,7 +35,7 @@ exports.createDictionaries = async (req, res) => {
       },
     });
   } catch (err) {
-    res.status(400).json({
+    res.status(404).json({
       status: "fail",
       message: err.message,
     });
